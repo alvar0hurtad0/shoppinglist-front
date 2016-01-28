@@ -13,7 +13,10 @@ var SearchPipe = (function () {
     }
     SearchPipe.prototype.transform = function (value, _a) {
         var term = _a[0];
-        return value.filter(function (item) { return item.title.startsWith(term); });
+        var regex = new RegExp(term, 'i');
+        return value.filter(function (item) {
+            return regex.test(item.title);
+        });
     };
     SearchPipe = __decorate([
         core_1.Pipe({
