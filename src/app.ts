@@ -1,4 +1,5 @@
 import {bootstrap} from "angular2/bootstrap";
+import {HTTP_PROVIDERS} from 'angular2/http';
 import {Component} from 'angular2/core';
 import {enableProdMode} from 'angular2/core';
 enableProdMode();
@@ -39,4 +40,4 @@ class App {
 
 }
 
-bootstrap(App,[TodoService]);
+bootstrap(App,[HTTP_PROVIDERS, TodoService]);

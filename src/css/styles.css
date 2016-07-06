@@ -3,7 +3,7 @@ body {
 }
 
 .input-container {
-  background-color: #E74C3C;
+  background-color: #333;
   padding: 3rem;
 }
 
@@ -53,7 +53,7 @@ h2 a {
 }
 
 .todo-container:hover {
-  border:solid 2px #3498DB;
+  border:solid 2px #0c0c0c;
 }
 
 .todo-container span {
@@ -70,16 +70,11 @@ label {
 
 /* Medium and up */
 @media screen and (min-width: 40em) {
-  .todo-container {
-    height: 140px;
-    overflow: hidden;
-  }
+
 }
 
 /* Large and up */
 @media screen and (min-width: 64em) {
-  .todo-container {
-    height: 160px;
-  }
+
 
 }

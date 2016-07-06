@@ -1,8 +1,10 @@
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") return Reflect.decorate(decorators, target, key, desc);
+    switch (arguments.length) {
+        case 2: return decorators.reduceRight(function(o, d) { return (d && d(o)) || o; }, target);
+        case 3: return decorators.reduceRight(function(o, d) { return (d && d(target, key)), void 0; }, void 0);
+        case 4: return decorators.reduceRight(function(o, d) { return (d && d(target, key, o)) || o; }, desc);
+    }
 };
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
@@ -24,7 +26,7 @@ var MyInput = (function () {
     MyInput = __decorate([
         core_1.Component({
             selector: 'my-input',
-            template: "\n    <div class=\"row\">\n        <div class=\"small-12 medium-10 large-8 medium-centered column\">\n            <h1>Todo List</h1>\n            <h2>Angular 2 Development by <a href=\"https://twitter.com/max_cabrera\" target=\"_self\"> @max_cabrera</a></h2>\n            <form (submit)=\"onSubmit(myInput)\">\n                <input class=\"enter-todo\" #myInput type=\"text\" [(ngModel)]=\"todoInput.title\" placeholder=\"Enter a new task\"/>\n            </form>\n        </div>\n    </div>"
+            template: "\n    <div class=\"row\">\n        <div class=\"small-12 medium-10 large-8 medium-centered column\">\n            <h1>Todo List</h1>\n            <h2>Angular example</h2>\n            <form (submit)=\"onSubmit(myInput)\">\n                <input class=\"enter-todo\" #myInput type=\"text\" [(ngModel)]=\"todoInput.title\" placeholder=\"Enter a new task\"/>\n            </form>\n        </div>\n    </div>"
         }), 
         __metadata('design:paramtypes', [todo_service_1.TodoService])
     ], MyInput);
