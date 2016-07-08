@@ -31,7 +31,8 @@ var TodoService = (function () {
         var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
         var options = new http_1.RequestOptions({ headers: headers });
         var body = JSON.stringify(todo);
-        return this.http.post('http://localhost/entity/todo_type/simple_todo', body, headers).map(function (res) { return res.json(); });
+        return this.http.post('http://localhost/entity/todo_type/simple_todo/', body, headers)
+            .map(function (res) { return res.json(); });
     };
     TodoService.prototype.getTodos = function () {
         return this.http.get('http://localhost/get/todos').map(function (res) { return res.json(); });

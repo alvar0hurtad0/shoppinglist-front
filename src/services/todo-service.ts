@@ -7,6 +7,7 @@ import {Observable} from 'rxjs/Rx';
 
 @Injectable()
 export class TodoService {
+    private service_url;
     todos =[]
     constructor(private http: Http) {}
 
@@ -26,7 +27,8 @@ export class TodoService {
         let headers = new Headers({'Content-Type': 'application/json'});
         let options = new RequestOptions({headers: headers});
         let body = JSON.stringify(todo);
-        return this.http.post('http://localhost/entity/todo_type/simple_todo', body, headers).map((res:Response) => res.json());
+        return this.http.post('http://localhost/entity/todo_type/simple_todo/', body, headers)
+            .map((res:Response) => res.json());
     }
 
     getTodos() {

@@ -23,6 +23,7 @@ export class MyInput {
     }
 
     onSubmit(myInput) {
+        
         this.todoService.addTodo(this.todoInput);
         myInput.value ='';
         myInput.focus();

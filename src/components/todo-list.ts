@@ -1,7 +1,6 @@
 import {Component, Input} from 'angular2/core';
 import {Observable} from 'rxjs/Rx';
 import {TodoService} from '../services/todo-service';
-import {TodoListRender} from '../components/todo-list-render';
 import {SearchPipe} from '../pipes/search-pipe';
 import {SearchStarted} from '../pipes/search-started';
 import {TodoModel} from "../models/todo-model";
@@ -22,7 +21,7 @@ import {OnInit} from "../../node_modules/angular2/ts/src/core/linker/interfaces"
 })
 export class TodoList implements OnInit{
     private errorMessage: string;
-    public items;
+    private items;
 
     @Input() status;
     @Input() term;

@@ -17,8 +17,6 @@ core_2.enableProdMode();
 /* Components */
 var my_input_1 = require('./components/my-input');
 var todo_list_1 = require('./components/todo-list');
-var status_selector_1 = require('./components/status-selector');
-var search_bar_1 = require('./components/search-bar');
 /* Services */
 var todo_service_1 = require('./services/todo-service');
 var App = (function () {
@@ -27,8 +25,8 @@ var App = (function () {
     App = __decorate([
         core_1.Component({
             selector: 'app',
-            directives: [my_input_1.MyInput, todo_list_1.TodoList, status_selector_1.StatusSelector, search_bar_1.SearchBar],
-            template: "\n  <div class=\"input-container\">\n    <my-input></my-input>\n  </div>\n  <div class=\"options-container\">\n  <div class=\"row \">\n    <div class=\"small-12 medium-10 large-8 medium-centered\">\n        <div class=\"small-12 medium-6 column\">\n            <status-selector (select)=\"status = $event\"></status-selector>\n        </div>\n        <div class=\"small-12 medium-6 column\">\n            <search-bar class=\"search-bar\" (update)=\"term = $event\" ></search-bar>\n        </div>\n    </div>\n  </div>\n  </div>\n\n  <todo-list [status]=\"status\" [term]=\"term\"></todo-list>\n  "
+            directives: [my_input_1.MyInput, todo_list_1.TodoList],
+            template: "\n  <div class=\"input-container\">\n    <my-input></my-input>\n  </div>\n  <todo-list [status]=\"status\" [term]=\"term\"></todo-list>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], App);
