@@ -15,6 +15,7 @@ var Rx_1 = require('rxjs/Rx');
 var TodoService = (function () {
     function TodoService(http) {
         this.http = http;
+        this.service_url = 'http://localhost';
         this.todos = [];
     }
     TodoService.prototype.extractData = function (res) {
@@ -31,11 +32,14 @@ var TodoService = (function () {
         var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
         var options = new http_1.RequestOptions({ headers: headers });
         var body = JSON.stringify(todo);
-        return this.http.post('http://localhost/entity/todo_type/simple_todo/', body, headers)
+        var me = this.http.post(this.service_url + '/entity/todo_type/simple_todo/', body, headers)
+            .map(function (res) { return res.json(); });
+        alert(me);
+        return this.http.post(this.service_url + '/entity/todo_type/simple_todo/', body, headers)
             .map(function (res) { return res.json(); });
     };
     TodoService.prototype.getTodos = function () {
-        return this.http.get('http://localhost/get/todos').map(function (res) { return res.json(); });
+        return this.http.get(this.service_url + '/api/todos').map(function (res) { return res.json(); });
     };
     TodoService = __decorate([
         core_1.Injectable(), 

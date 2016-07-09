@@ -1,0 +1,7 @@
+<div class="row">
+    <div *ngFor="#item of items" class="small-12 medium-6 large-4 column end">
+        <div class="todo-container">
+            <input type="checkbox" (change)="toggle.emit(todo)"> {{item.title}}
+        </div>
+    </div>
+</div>

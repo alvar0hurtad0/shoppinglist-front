@@ -11,8 +11,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('angular2/core');
 var todo_service_1 = require('../services/todo-service');
-var search_pipe_1 = require('../pipes/search-pipe');
-var search_started_1 = require('../pipes/search-started');
 var TodoList = (function () {
     function TodoList(todoService) {
         this.todoService = todoService;
@@ -35,8 +33,7 @@ var TodoList = (function () {
     TodoList = __decorate([
         core_1.Component({
             selector: 'todo-list',
-            pipes: [search_pipe_1.SearchPipe, search_started_1.SearchStarted],
-            template: "\n    <div class=\"row\">\n       <div *ngFor=\"#item of items\" class=\"small-12 medium-6 large-4 column end\">\n           <div class=\"todo-container\">\n                    <input type=\"checkbox\" (change)=\"toggle.emit(todo)\"> {{item.title}}\n           </div>\n       </div>\n    </div>\n    "
+            templateUrl: 'templates/todo-list.component.html',
         }), 
         __metadata('design:paramtypes', [todo_service_1.TodoService])
     ], TodoList);

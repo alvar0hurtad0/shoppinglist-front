@@ -1,6 +1,4 @@
 export class TodoModel {
-
-
     toggle():void{
         this.status =
             this.status == 'Started'

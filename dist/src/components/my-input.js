@@ -26,7 +26,7 @@ var MyInput = (function () {
     MyInput = __decorate([
         core_1.Component({
             selector: 'my-input',
-            template: "\n    <div class=\"row\">\n        <div class=\"small-12 medium-10 large-8 medium-centered column\">\n            <h1>Todo List</h1>\n            <h2>Angular example</h2>\n            <form (submit)=\"onSubmit(myInput)\">\n                <input class=\"enter-todo\" #myInput type=\"text\" [(ngModel)]=\"todoInput.title\" placeholder=\"Enter a new task\"/>\n            </form>\n        </div>\n    </div>"
+            templateUrl: 'templates/my-input.component.html',
         }), 
         __metadata('design:paramtypes', [todo_service_1.TodoService])
     ], MyInput);

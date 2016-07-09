@@ -12,7 +12,7 @@ import {TodoList} from './components/todo-list';
 import {TodoService} from './services/todo-service';
 
 @Component({
-  selector: 'app',
+  selector: 'todo-list-app',
   directives:[MyInput,TodoList],
   template: `
   <div class="input-container">

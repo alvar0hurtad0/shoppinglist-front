@@ -4,16 +4,7 @@ import {TodoModel} from '../models/todo-model';
 
 @Component({
     selector: 'my-input',
-    template: `
-    <div class="row">
-        <div class="small-12 medium-10 large-8 medium-centered column">
-            <h1>Todo List</h1>
-            <h2>Angular example</h2>
-            <form (submit)="onSubmit(myInput)">
-                <input class="enter-todo" #myInput type="text" [(ngModel)]="todoInput.title" placeholder="Enter a new task"/>
-            </form>
-        </div>
-    </div>`
+    templateUrl: 'templates/my-input.component.html',
 })
 export class MyInput {
 

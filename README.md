@@ -1,10 +1,8 @@
-## Angular 2 Todo List by @max_cabrera
+## Angular 2 REST demo
 
-This is a basic todo or task list with search functionallity and ability to toggle views from Started and Completed tasks.
+Based on @max_cabrera TODO list ( https://github.com/maxcabrera/todo-list )
 
-Demo: http://maxcabrera.com/code/todo-list/
-
-Feedback: @max_cabrera
+This is the fronted app backed-app is https://github.com/alvar0hurtad0/shoppinglist-back
 
 ### Local use:
 - Clone or fork this repository

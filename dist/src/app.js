@@ -24,7 +24,7 @@ var App = (function () {
     }
     App = __decorate([
         core_1.Component({
-            selector: 'app',
+            selector: 'todo-list-app',
             directives: [my_input_1.MyInput, todo_list_1.TodoList],
             template: "\n  <div class=\"input-container\">\n    <my-input></my-input>\n  </div>\n  <todo-list [status]=\"status\" [term]=\"term\"></todo-list>\n  "
         }), 
